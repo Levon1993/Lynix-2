@@ -1,0 +1,40 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: #0d0d0d; color: #fff; overflow-x: hidden; }
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; text-align: center; padding: 1em; z-index: 1000;
+}
+.cookie-banner button { background: #00f0ff; border: none; padding: 0.5em 1em; cursor: pointer; color: #000; font-weight: bold; }
+
+/* Header */
+header { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #0d0d0d, #001f3f); text-align: center; position: relative; overflow: hidden; }
+nav { position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 1em 3em; background: rgba(0,0,0,0.5); }
+nav .logo { font-weight: bold; font-size: 1.5em; color: #00f0ff; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 2em; }
+nav ul li a { color: #fff; text-decoration: none; transition: color 0.3s; }
+nav ul li a:hover { color: #00f0ff; }
+
+/* Hero Animations */
+.hero h1 { font-size: 3em; margin-bottom: 0.5em; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards; }
+.hero p { font-size: 1.5em; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards 0.5s; }
+.hero .btn { margin-top: 1em; padding: 0.7em 2em; background: #00f0ff; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards 1s; }
+
+/* Features */
+.features { display: flex; justify-content: center; gap: 2em; padding: 5em 2em; flex-wrap: wrap; }
+.feature { background: rgba(0,0,0,0.6); padding: 2em; border-radius: 15px; width: 300px; text-align: center; transform: translateY(50px); opacity: 0; animation: fadeUp 1s forwards; }
+.feature.delay1 { animation-delay: 0.5s; }
+.feature.delay2 { animation-delay: 1s; }
+
+/* Footer */
+footer { text-align: center; padding: 2em; background: #111; }
+
+/* Animations */
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Animated text delay helper */
+.animated-text { opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards; }
+.delay1 { animation-delay: 0.5s; }
+.delay2 { animation-delay: 1s; }
