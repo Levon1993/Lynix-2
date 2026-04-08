@@ -55,3 +55,26 @@ footer { text-align: center; padding: 2em; background: #111; }
 .contact-form input, .contact-form textarea { padding: 0.8em; border-radius: 5px; border: none; outline: none; }
 .contact-form .btn { background: #00f0ff; color: #000; font-weight: bold; border: none; padding: 0.7em 1em; cursor: pointer; transition: transform 0.3s; }
 .contact-form .btn:hover { transform: scale(1.05); }
+
+/* Neon Text Effekt für Headings */
+h1, h2, h3 { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
+
+/* Glowing Buttons */
+.btn { 
+  box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+}
+
+/* Hero Überschrift leicht schimmernd animieren */
+.hero h1 {
+  animation: neonGlow 2s infinite alternate;
+}
+@keyframes neonGlow {
+  0% { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; }
+  50% { text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff; }
+  100% { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; }
+}
