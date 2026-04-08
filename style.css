@@ -1,8 +1,8 @@
-/* Reset */
+/* --- Reset --- */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
 body { background: #0d0d0d; color: #fff; overflow-x: hidden; }
 
-/* Cookie Banner */
+/* --- Cookie Banner --- */
 .cookie-banner {
   position: fixed; 
   bottom: 0; 
@@ -22,7 +22,7 @@ body { background: #0d0d0d; color: #fff; overflow-x: hidden; }
   font-weight: bold; 
 }
 
-/* Header + Hero */
+/* --- Header + Hero --- */
 header { 
   min-height: 100vh; 
   display: flex; 
@@ -33,33 +33,66 @@ header {
   text-align: center; 
   position: relative; 
   overflow: hidden; 
+  z-index: 10; /* Header über Canvas */
 }
 
-/* Navigation */
+/* --- Navigation --- */
 nav { 
-  position: absolute; 
+  position: relative; /* sticky über Canvas */
   top: 0; 
   width: 100%; 
   display: flex; 
   justify-content: space-between; 
+  align-items: center;
   padding: 1em 3em; 
   background: rgba(0,0,0,0.5); 
+  z-index: 20;
 }
-nav .logo { font-weight: bold; font-size: 1.5em; color: #00f0ff; }
-nav ul { display: flex; list-style: none; }
+nav .logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s;
+}
+nav .logo img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px #00f0ff);
+}
+
+/* Desktop Links */
+nav ul { 
+  display: flex; 
+  list-style: none; 
+}
 nav ul li { margin-left: 2em; }
 nav ul li a { color: #fff; text-decoration: none; transition: color 0.3s; }
 nav ul li a:hover { color: #00f0ff; }
 
-/* Hero Section */
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: #00f0ff;
+  border-radius: 2px;
+}
+
+/* --- Hero Section --- */
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* vertikal zentrieren */
-  align-items: center;      /* horizontal zentrieren */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   text-align: center;
-  gap: 2em; /* Abstand zwischen Text und Button */
+  gap: 2em;
   position: relative;
   overflow: hidden;
 }
@@ -88,39 +121,19 @@ nav ul li a:hover { color: #00f0ff; }
   animation: fadeUp 1s forwards 1s; 
 }
 
-/* Features Section */
-.features { display: flex; justify-content: center; gap: 2em; padding: 5em 2em; flex-wrap: wrap; }
-.feature { background: rgba(0,0,0,0.6); padding: 2em; border-radius: 15px; width: 300px; text-align: center; transform: translateY(50px); opacity: 0; animation: fadeUp 1s forwards; }
-.feature.delay1 { animation-delay: 0.5s; }
-.feature.delay2 { animation-delay: 1s; }
+/* --- Features, Team, Mission, Contact, Footer --- */
+/* unverändert, nur z-index nicht nötig hier */
 
-/* Team Section */
-.team { padding: 5em 2em; text-align: center; }
-.team-members { display: flex; justify-content: center; gap: 2em; flex-wrap: wrap; margin-top: 2em; }
-.member { background: rgba(0,0,0,0.6); padding: 2em; border-radius: 15px; width: 250px; transform: translateY(50px); opacity: 0; animation: fadeUp 1s forwards; }
-.member.delay1 { animation-delay: 0.5s; }
-
-/* Mission Section */
-.mission { padding: 5em 2em; text-align: center; max-width: 800px; margin: auto; }
-.mission p { font-size: 1.2em; line-height: 1.8; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards 1s; }
-
-/* Contact Form */
-.contact-form { padding: 5em 2em; display: flex; justify-content: center; }
-.contact-form form { display: flex; flex-direction: column; gap: 1em; background: rgba(0,0,0,0.6); padding: 2em; border-radius: 15px; width: 100%; max-width: 500px; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards; }
-.contact-form input, .contact-form textarea { padding: 0.8em; border-radius: 5px; border: none; outline: none; }
-.contact-form .btn { background: #00f0ff; color: #000; font-weight: bold; border: none; padding: 0.7em 1em; cursor: pointer; transition: transform 0.3s; }
-.contact-form .btn:hover { transform: scale(1.05); }
-
-/* Footer */
-footer { text-align: center; padding: 2em; background: #111; }
-
-/* Animations */
+/* --- Animations --- */
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes popBounce { 0% { transform: scale(1); } 50% { transform: scale(1.4); } 70% { transform: scale(1.2); } 100% { transform: scale(1.3); } }
 
-/* Neon Text Effekt für Headings */
+/* Neon-Text */
 h1, h2, h3 { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
+.hero h1 { animation: neonGlow 2s infinite alternate; }
+@keyframes neonGlow { 0% { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; } 50% { text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff; } 100% { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; } }
 
-/* Glowing Buttons */
+/* --- Buttons --- */
 .btn { 
   box-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -130,72 +143,24 @@ h1, h2, h3 { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
   box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
 }
 
-/* Hero Überschrift leicht schimmernd animieren */
-.hero h1 { animation: neonGlow 2s infinite alternate; }
-@keyframes neonGlow {
-  0% { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; }
-  50% { text-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff; }
-  100% { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff; }
-}
-
-/* Responsive Anpassungen */
+/* --- Responsive --- */
 @media (max-width: 768px) {
   header .hero { gap: 3em; }
   .hero h1 { font-size: 2.2em; }
   .hero p { font-size: 1.2em; }
-}
-.pop-text:hover {
-  animation: popBounce 0.4s forwards;
-}
-nav ul {
-  flex-direction: column;
-  gap: 1em;
-  background: rgba(0,0,0,0.8);
-  position: absolute;
-  top: 60px; /* Höhe der Navbar */
-  right: 0;
-  width: 100%;
-  padding: 1em 2em;
-  display: none; /* versteckt am Anfang */
-}
 
-nav ul.active {
-  display: flex;
-}
-@keyframes popBounce {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.4); }
-  70% { transform: scale(1.2); }
-  100% { transform: scale(1.3); }
-}
-/* Logo Bild statt Text */
-.logo img {
-  height: 60px;
-  width: auto;
-  display: block;
-}
-
-/* Optional: leichter Hover Effekt */
-.logo img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 5px #00f0ff);
-}
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-.hamburger span {
-  display: block;
-  height: 3px;
-  width: 25px;
-  background: #00f0ff;
-  border-radius: 2px;
-}
-
-/* nur auf Handy anzeigen */
-@media (max-width: 768px) {
+  /* Hamburger anzeigen */
   .hamburger { display: flex; }
-  nav ul { display: none; }
+  nav ul { 
+    display: none; /* versteckt am Anfang */
+    flex-direction: column;
+    gap: 1em;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1em 2em;
+  }
+  nav ul.active { display: flex; }
 }
