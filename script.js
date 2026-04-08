@@ -2,18 +2,20 @@
 const cookieBanner = document.getElementById('cookie-banner');
 const acceptBtn = document.getElementById('accept-cookies');
 
-window.addEventListener('load', () => {
-  if (cookieBanner && localStorage.getItem('cookiesAccepted') === 'true') {
-    cookieBanner.style.display = 'none';
+document.addEventListener('DOMContentLoaded', () => {
+  if (cookieBanner) {
+    if (localStorage.getItem('cookiesAccepted') !== 'true') {
+      cookieBanner.style.display = 'block'; // Banner nur zeigen, wenn Cookie nicht gesetzt
+    }
+  }
+
+  if (acceptBtn && cookieBanner) {
+    acceptBtn.addEventListener('click', () => {
+      cookieBanner.style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    });
   }
 });
-
-if (acceptBtn && cookieBanner) {
-  acceptBtn.addEventListener('click', () => {
-    cookieBanner.style.display = 'none';
-    localStorage.setItem('cookiesAccepted', 'true');
-  });
-}
 
 // --- Futuristischer Partikel-Hintergrund ---
 const canvas = document.createElement('canvas');
