@@ -20,7 +20,7 @@ nav ul li a:hover { color: #00f0ff; }
 /* Hero Animations */
 .hero h1 { font-size: 3em; margin-bottom: 0.5em; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards; }
 .hero p { font-size: 1.5em; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards 0.5s; }
-.hero .btn { margin-top: 1em; padding: 0.7em 2em; background: #00f0ff; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards 1s; }
+.hero .btn { margin-top: 2em; padding: 0.7em 2em; background: #00f0ff; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; opacity: 0; transform: translateY(50px); animation: fadeUp 1s forwards 1s; }
 
 /* Features */
 .features { display: flex; justify-content: center; gap: 2em; padding: 5em 2em; flex-wrap: wrap; }
