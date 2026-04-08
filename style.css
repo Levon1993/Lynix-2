@@ -222,7 +222,7 @@ body.about-page header {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: url('images/about.jpg') center center / cover no-repeat;
+    background: url('images/logo.png') center center / cover no-repeat;
     background-attachment: scroll; /* wichtig für mobile */
 }
 
