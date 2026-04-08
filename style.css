@@ -270,21 +270,26 @@ body.contact-page header .hero {
         background-position: center top;
     }
 }
-/* --- Services Page Hintergrund --- */
-#services-page {
-  background-image: url('images/hintergrund2.jpg'); /* Pfad anpassen */
-  background-size: cover;       /* Bild füllt Container, wird ggf. beschnitten */
-  background-position: center;  /* Bild zentrieren */
-  background-repeat: no-repeat; /* Bild nicht wiederholen */
-  min-height: 100vh;            /* mindestens volle Höhe des Viewports */
-  width: 100%;
+body.services-page {
+    background: #0d0d0d; /* Fallback dunkel, falls Bild nicht lädt */
 }
 
-/* --- Mobile Anpassung --- */
+body.services-page header {
+    min-height: 100vh; /* volle Höhe */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: url('images/hintergrund2.jpg') center center / cover no-repeat;
+    background-attachment: scroll; /* wichtig für mobile */
+}
+
 @media (max-width: 768px) {
-  #services-page {
-    background-size: contain;    /* Bild wird vollständig angezeigt */
-    background-position: top;    /* Bild oben ausrichten */
-    min-height: 50vh;            /* evtl. Höhe anpassen */
-  }
+    body.services-page header {
+        background-size: contain; /* passt Bild an kleinere Screens an */
+        background-position: top center;
+    }
 }
