@@ -156,7 +156,7 @@ h1, h2, h3 { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
 }
 /* Logo Bild statt Text */
 .logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
   display: block;
 }
