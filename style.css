@@ -144,13 +144,13 @@ h1, h2, h3 { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
   .hero h1 { font-size: 2.2em; }
   .hero p { font-size: 1.2em; }
 }
-.pop-text {
-  display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
+.pop-text:hover {
+  animation: popBounce 0.4s forwards;
 }
 
-.pop-text:hover {
-  transform: scale(1.3) rotate(-2deg); /* Vergrößerung + kleiner Dreh-Effekt */
-  color: #00f0ff; /* optional: Farbwechsel beim Hover */
+@keyframes popBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1.3); }
 }
