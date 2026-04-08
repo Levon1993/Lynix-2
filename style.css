@@ -232,3 +232,22 @@ body.about-page header {
         background-position: top center;
     }
 }
+body.contact-page header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: url('images/hero.jpg') center center / cover no-repeat;
+    background-attachment: scroll; /* für mobile */
+}
+
+@media (max-width: 768px) {
+    body.contact-page header {
+        background-size: contain; /* passt Bild an kleinere Screens an */
+        background-position: top center;
+    }
+}
