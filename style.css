@@ -283,7 +283,7 @@ body.services-page header {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background: url('images/hintergrund2.jpg') center center / cover no-repeat;
+    background: url('images/hintergrund3.jpg') center center / cover no-repeat;
     background-attachment: scroll; /* wichtig für mobile */
 }
 
