@@ -209,9 +209,18 @@ footer { text-align: center; padding: 2em; background: #111; width: 100%; box-si
   }
   nav ul.active { display: flex; }
 }
-.about-page {
-    background-image: url('images/about.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+body.about-page {
+    background: #0d0d0d; /* Fallback dunkel, falls Bild nicht lädt */
+}
+
+body.about-page header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: url('images/about.jpg') center center / cover no-repeat;
 }
