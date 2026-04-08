@@ -45,7 +45,7 @@ header {
   background: linear-gradient(135deg, #0d0d0d, #001f3f);
 }
 body.homepage header {
-  background: url('images/hero.jpg') center center / cover no-repeat,
+  background: url('images/logo.png') center center / cover no-repeat,
               linear-gradient(135deg, #0d0d0d, #001f3f);
 }
 
