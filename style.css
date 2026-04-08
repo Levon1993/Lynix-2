@@ -34,7 +34,10 @@ header {
   overflow: hidden; 
   z-index: 10; 
 }
-
+/* Nur auf der Startseite: Hero-Bild */
+body.homepage header {
+  background: url('images/hero.jpg') center center / cover no-repeat, linear-gradient(135deg, #0d0d0d, #001f3f);
+}
 /* --- Navigation --- */
 nav { 
   position: relative; 
