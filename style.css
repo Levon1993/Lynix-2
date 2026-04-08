@@ -214,7 +214,7 @@ body.about-page {
 }
 
 body.about-page header {
-    min-height: 100vh;
+    min-height: 100vh; /* volle Höhe */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,4 +223,12 @@ body.about-page header {
     overflow: hidden;
     z-index: 1;
     background: url('images/about.jpg') center center / cover no-repeat;
+    background-attachment: scroll; /* wichtig für mobile */
+}
+
+@media (max-width: 768px) {
+    body.about-page header {
+        background-size: contain; /* passt Bild an kleinere Screens an */
+        background-position: top center;
+    }
 }
