@@ -147,7 +147,21 @@ h1, h2, h3 { text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00f0ff; }
 .pop-text:hover {
   animation: popBounce 0.4s forwards;
 }
+nav ul {
+  flex-direction: column;
+  gap: 1em;
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 60px; /* Höhe der Navbar */
+  right: 0;
+  width: 100%;
+  padding: 1em 2em;
+  display: none; /* versteckt am Anfang */
+}
 
+nav ul.active {
+  display: flex;
+}
 @keyframes popBounce {
   0% { transform: scale(1); }
   50% { transform: scale(1.4); }
