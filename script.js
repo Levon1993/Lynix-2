@@ -3,15 +3,17 @@ const cookieBanner = document.getElementById('cookie-banner');
 const acceptBtn = document.getElementById('accept-cookies');
 
 window.addEventListener('load', () => {
-  if(localStorage.getItem('cookiesAccepted') === 'true'){
+  if (cookieBanner && localStorage.getItem('cookiesAccepted') === 'true') {
     cookieBanner.style.display = 'none';
   }
 });
 
-acceptBtn.addEventListener('click', () => {
-  cookieBanner.style.display = 'none';
-  localStorage.setItem('cookiesAccepted', 'true');
-});
+if (acceptBtn && cookieBanner) {
+  acceptBtn.addEventListener('click', () => {
+    cookieBanner.style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
+}
 
 // --- Futuristischer Partikel-Hintergrund ---
 const canvas = document.createElement('canvas');
@@ -25,53 +27,50 @@ canvas.style.zIndex = '-1';
 const ctx = canvas.getContext('2d');
 
 let width, height;
-function resize() {
+function resizeCanvas() {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
 }
-window.addEventListener('resize', resize);
-resize();
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
 
-// Partikel-Setup
 const particles = [];
 const numParticles = 80;
-for(let i=0; i<numParticles; i++){
+for (let i = 0; i < numParticles; i++) {
   particles.push({
-    x: Math.random()*width,
-    y: Math.random()*height,
-    vx: (Math.random()-0.5)*0.5,
-    vy: (Math.random()-0.5)*0.5,
-    size: Math.random()*2 + 1,
-    alpha: Math.random()*0.5 + 0.3
+    x: Math.random() * width,
+    y: Math.random() * height,
+    vx: (Math.random() - 0.5) * 0.5,
+    vy: (Math.random() - 0.5) * 0.5,
+    size: Math.random() * 2 + 1,
+    alpha: Math.random() * 0.5 + 0.3
   });
 }
 
-function draw() {
+function drawParticles() {
   ctx.fillStyle = 'rgba(13,13,13,0.3)';
-  ctx.fillRect(0,0,width,height);
+  ctx.fillRect(0, 0, width, height);
 
-  // Linien zwischen Partikeln
-  for(let i=0; i<particles.length; i++){
+  for (let i = 0; i < particles.length; i++) {
     const p = particles[i];
     p.x += p.vx;
     p.y += p.vy;
 
-    if(p.x < 0 || p.x > width) p.vx *= -1;
-    if(p.y < 0 || p.y > height) p.vy *= -1;
+    if (p.x < 0 || p.x > width) p.vx *= -1;
+    if (p.y < 0 || p.y > height) p.vy *= -1;
 
     ctx.fillStyle = `rgba(0,255,255,${p.alpha})`;
     ctx.beginPath();
-    ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
     ctx.fill();
 
-    // Linien
-    for(let j=i+1; j<particles.length; j++){
+    for (let j = i + 1; j < particles.length; j++) {
       const p2 = particles[j];
       const dx = p.x - p2.x;
       const dy = p.y - p2.y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if(dist < 150){
-        ctx.strokeStyle = `rgba(0,255,255,${0.1})`;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 150) {
+        ctx.strokeStyle = 'rgba(0,255,255,0.1)';
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
@@ -81,12 +80,26 @@ function draw() {
     }
   }
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(drawParticles);
 }
-draw();
+drawParticles();
+
+// --- Hamburger-Menü ---
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('nav ul');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Schließt das Menü beim Klick auf einen Link (Mobilgeräte)
+  const navItems = navLinks.querySelectorAll('li a');
+  navItems.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
+  });
+}
