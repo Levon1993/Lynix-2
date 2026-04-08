@@ -12,9 +12,8 @@ body {
   text-align: center;
 }
 
-/* --- Cookie Banner --- */
-.cookie-banner {
-  display: none; /* <--- Banner standardmäßig verstecken */
+#cookie-banner {
+  display: none; /* Banner standardmäßig verstecken */
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -25,7 +24,7 @@ body {
   z-index: 2000;
 }
 
-.cookie-banner button {
+#cookie-banner button {
   background: #00f0ff;
   border: none;
   padding: 0.5em 1em;
