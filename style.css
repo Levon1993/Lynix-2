@@ -209,22 +209,3 @@ footer { text-align: center; padding: 2em; background: #111; width: 100%; box-si
   }
   nav ul.active { display: flex; }
 }
-#about {
-  /* Hintergrundbild setzen */
-  background-image: url('images/about.jpg');
-
-  /* Bild anpassen */
-  background-size: cover;      /* Bild füllt den Bereich komplett aus */
-  background-position: center; /* Bild wird zentriert */
-  background-repeat: no-repeat; /* Kein Kachel-Effekt */
-
-  /* Bereich größer machen, damit man das Bild sieht */
-  min-height: 400px;           /* Höhe anpassen nach Bedarf */
-  color: white;                /* Textfarbe für besseren Kontrast */
-  display: flex;               /* optional: Text zentrieren */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
