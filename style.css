@@ -293,3 +293,16 @@ body.services-page header {
         background-position: center center;
     }
 }
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
