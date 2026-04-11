@@ -105,3 +105,9 @@ if (hamburger && navLinks) {
     });
   });
 }
+function scrollToContent() {
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+}
