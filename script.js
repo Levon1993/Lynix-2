@@ -106,8 +106,7 @@ if (hamburger && navLinks) {
   });
 }
 function scrollToContent() {
-    window.scrollTo({
-        top: window.innerHeight,
+    document.getElementById("content").scrollIntoView({
         behavior: "smooth"
     });
 }
