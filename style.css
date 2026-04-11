@@ -300,7 +300,7 @@ body.services-page header {
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-    z-index: 10;
+    z-index: 999;
 }
 
 .scroll-down span {
