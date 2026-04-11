@@ -293,16 +293,32 @@ body.services-page header {
         background-position: center center;
     }
 }
+
 .scroll-down {
     position: absolute;
     bottom: 250px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
     cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-down span {
+    font-size: 40px;
+    color: white;
+    animation: bounce 1.8s infinite, glow 2s infinite alternate;
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(10px); }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255,255,255,0.4);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(255,255,255,0.9);
+    }
 }
