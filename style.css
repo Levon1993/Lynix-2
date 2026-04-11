@@ -229,7 +229,7 @@ body.about-page header {
 
 @media (max-width: 768px) {
     body.about-page header {
-        background-size: cover; /* passt Bild an kleinere Screens an */
+        background-size: contain; /* passt Bild an kleinere Screens an */
         background-position: center center;
     }
 }
@@ -289,7 +289,7 @@ body.services-page header {
 
 @media (max-width: 768px) {
     body.services-page header {
-        background-size: contain; /* passt Bild an kleinere Screens an */
+        background-size: cover; /* passt Bild an kleinere Screens an */
         background-position: top center;
     }
 }
