@@ -295,7 +295,7 @@ body.services-page header {
 }
 .scroll-down {
     position: absolute;
-    bottom: 80px;
+    bottom: 160px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
