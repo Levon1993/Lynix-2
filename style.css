@@ -256,7 +256,6 @@ body.contact-page header::before {
     background: url('images/hero.jpg') center top / cover no-repeat;
     opacity: 1; /* Logo sichtbar, Text drüber */
     z-index: 0;
-    pointer-events: none;
 }
 
 body.contact-page header .hero {
