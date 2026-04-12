@@ -111,3 +111,8 @@ function scrollToContent() {
     behavior: 'smooth'
   });
 }
+document.getElementById("scrollBtn").addEventListener("click", () => {
+  document.querySelector(".contact-form").scrollIntoView({
+    behavior: "smooth"
+  });
+});
