@@ -111,8 +111,12 @@ function scrollToContent() {
     behavior: 'smooth'
   });
 }
-document.getElementById("scrollBtn").addEventListener("click", () => {
-  document.querySelector(".contact-form").scrollIntoView({
-    behavior: "smooth"
+const scrollBtn = document.getElementById("scrollBtn");
+
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", () => {
+    document.querySelector(".contact-form")?.scrollIntoView({
+      behavior: "smooth"
+    });
   });
-});
+}
