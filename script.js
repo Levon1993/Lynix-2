@@ -107,7 +107,7 @@ if (hamburger && navLinks) {
   });
 }
 function scrollToContent() {
-  const target = document.querySelector('.features') || document.querySelector('.team');
+  const target = document.querySelector('.features') || document.querySelector('.team') || document.querySelector('.mission');
 
   if (target) {
     target.scrollIntoView({
