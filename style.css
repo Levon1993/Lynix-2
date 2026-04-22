@@ -317,6 +317,30 @@ body.impressum-page header {
         background-position: center center;
     }
 }
+
+body.agb-page {
+    background: #0d0d0d; /* Fallback */
+}
+
+body.agb-page header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: url('images/agb.jpg') center center / cover no-repeat;
+    background-attachment: scroll; /* wichtig für mobile */
+}
+
+@media (max-width: 768px) {
+    body.agb-page header {
+        background-size: cover;
+        background-position: center center;
+    }
+}
 .scroll-down {
   position: absolute;
   bottom: 200px;
