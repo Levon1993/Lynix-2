@@ -370,3 +370,56 @@ body.agb-page header {
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, 10px); }
 }
+
+/* Progress Bar */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #00f0ff, #8a2eff);
+  z-index: 9999;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #00f0ff, #8a2eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Modern Cards */
+.card {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 240, 255, 0.2);
+}
+
+/* Hero Upgrade */
+.hero {
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,240,255,0.2), transparent);
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(40px); }
+}
