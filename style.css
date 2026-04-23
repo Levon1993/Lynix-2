@@ -420,3 +420,13 @@ body.agb-page header {
   opacity: 0.6;
   pointer-events: none;
 }
+
+.about-page .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 40px;
+  padding-top: 30px;
+  text-align: left;
+}
