@@ -3,84 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Impressum – Lynix AI</title>
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="images/logo.png">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body class="impressum-page">
 
+<!-- HEADER -->
 <header>
-  <nav>
-     <a href="index.html" class="logo">
-  <img src="images/logo.png" alt="Lynix AI Logo">
-</a>
-    <div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-    <ul>
-      <li><a href="index.html">Start</a></li>
-      <li><a href="about.html">Über uns</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Kontakt</a></li>
-      <li><a href="impressum.html">Impressum</a></li>
-    </ul>
-  </nav>
 
-  <div class="hero">
-    <h1>Impressum</h1>
-    <p>Angaben gemäß § 5 ECG</p>
+<nav>
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="Lynix AI Logo">
+  </a>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
   </div>
-  <div class="scroll-down" onclick="scrollToContent()">
-    ↓
-  </div>
+
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="about.html">Über uns</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+  <h1 data-aos="fade-up">Impressum</h1>
+
+  <p data-aos="fade-up" data-aos-delay="200">
+    Rechtliche Angaben gemäß § 5 ECG
+  </p>
+
+</div>
+
+<div class="scroll-down" onclick="scrollToContent()">↓</div>
+
 </header>
 
+<!-- CONTENT -->
 <section class="mission">
-  <h2>Unternehmensangaben</h2>
-  <p>
-    Lynix AI<br><br>
-    Sitz: Kufstein, Tirol, Österreich<br><br>
-    Gründer:<br>
-    Levon Shahverdyan<br>
-    Hamza Polat
-  </p>
 
-  <h2>Kontakt</h2>
-  <p>
-    E-Mail: info@lynix-ai.com<br>
-    (Bitte anpassen)
-  </p>
+  <div data-aos="fade-up">
+    <h2>Unternehmensangaben</h2>
+    <p>
+      Lynix AI<br><br>
+      Sitz: Kufstein, Tirol, Österreich<br><br>
+      Gründer:<br>
+      Levon Shahverdyan<br>
+      Hamza Polat
+    </p>
+  </div>
 
-  <h2>Haftung für Inhalte</h2>
-  <p>
-    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
-    Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
-  </p>
+  <div data-aos="fade-up" data-aos-delay="150">
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: info@lynix-ai.com
+    </p>
+  </div>
 
-  <h2>Haftung für Links</h2>
-  <p>
-    Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-    Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
-  </p>
+  <div data-aos="fade-up" data-aos-delay="300">
+    <h2>Haftung für Inhalte</h2>
+    <p>
+      Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für Richtigkeit,
+      Vollständigkeit und Aktualität übernehmen wir keine Gewähr.
+    </p>
+  </div>
 
-  <h2>Urheberrecht</h2>
-  <p>
-    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem Urheberrecht.
-  </p>
+  <div data-aos="fade-up" data-aos-delay="450">
+    <h2>Haftung für Links</h2>
+    <p>
+      Diese Website enthält Links zu externen Websites, auf deren Inhalte wir keinen Einfluss haben.
+    </p>
+  </div>
+
+  <div data-aos="fade-up" data-aos-delay="600">
+    <h2>Urheberrecht</h2>
+    <p>
+      Die Inhalte dieser Website unterliegen dem Urheberrecht.
+    </p>
+  </div>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>
-  &copy; 2026 Lynix AI
-  <a href="impressum.html">Impressum</a> |
-  <a href="agb.html">AGB</a>
-</p>
+    &copy; 2026 Lynix AI |
+    <a href="impressum.html">Impressum</a> |
+    <a href="agb.html">AGB</a>
+  </p>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-out-cubic"
+});
+</script>
+
 <script src="//code.tidio.co/tw6kow2mch1fa9wt641dgrq0m3jitlnj.js" async></script>
-  
+
 </body>
 </html>
