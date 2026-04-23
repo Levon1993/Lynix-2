@@ -3,24 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lynix AI – Automatisierung durch KI</title>
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="images/logo.png">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body class="homepage">
 
-<div id="google_translate_element"></div>
+<!-- Progress Bar -->
+<div id="progress"></div>
 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    {pageLanguage: 'de'},
-    'google_translate_element'
-  );
-}
-</script>
-
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">
   Diese Webseite verwendet Cookies für ein besseres Nutzererlebnis. 
@@ -29,58 +26,87 @@ function googleTranslateElementInit() {
 
 <!-- Header -->
 <header>
-  <nav>
-    <a href="index.html" class="logo">
-  <img src="images/logo.png" alt="Lynix AI Logo">
-</a>
-    <div class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-    <ul>
-      <li><a href="index.html">Start</a></li>
-      <li><a href="about.html">Über uns</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Kontakt</a></li>
-    </ul>
-  </nav>
-  <div class="hero">
-    <h1 class="animated-text">Wir bringen KI in Ihr Unternehmen</h1>
-    <p class="animated-text delay1">Automatisierung, Effizienz & Innovation</p>
-    <a href="contact.html" class="btn animated-text delay2">Jetzt Termin vereinbaren</a>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="Lynix AI Logo">
+  </a>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
   </div>
-<div class="scroll-down" onclick="scrollToContent()">
-  ↓
+
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="about.html">Über uns</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+  <h1 data-aos="fade-up">
+    Wir bringen <span class="gradient-text">KI</span> in Ihr Unternehmen
+  </h1>
+
+  <p data-aos="fade-up" data-aos-delay="200">
+    Automatisierung, Effizienz & Innovation
+  </p>
+
+  <a href="contact.html" class="btn" data-aos="fade-up" data-aos-delay="400">
+    Jetzt Termin vereinbaren
+  </a>
+
 </div>
+
+<div class="scroll-down" onclick="scrollToContent()">↓</div>
+
 </header>
 
-<!-- Features Section -->
+<!-- FEATURES -->
 <section class="features">
-  <div class="feature animated-card">
+
+  <div class="feature card" data-aos="fade-up">
     <h2>Automatisierung</h2>
-    <p>Optimieren Sie Arbeitsprozesse durch intelligente KI-Lösungen.</p>
+    <p>Optimieren Sie Prozesse durch intelligente KI-Systeme.</p>
   </div>
-  <div class="feature animated-card delay1">
+
+  <div class="feature card" data-aos="fade-up" data-aos-delay="200">
     <h2>Data Insights</h2>
-    <p>Wir analysieren Ihre Daten, um wertvolle Insights zu generieren.</p>
+    <p>Wir verwandeln Daten in klare Entscheidungen.</p>
   </div>
-  <div class="feature animated-card delay2">
+
+  <div class="feature card" data-aos="fade-up" data-aos-delay="400">
     <h2>Individuelle Lösungen</h2>
     <p>Massgeschneiderte AI-Systeme für Ihr Unternehmen.</p>
   </div>
+
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
   <p>
-  &copy; 2026 Lynix AI
-  <a href="impressum.html">Impressum</a> |
-  <a href="agb.html">AGB</a>
-</p>
+    &copy; 2026 Lynix AI
+    <a href="impressum.html">Impressum</a> |
+    <a href="agb.html">AGB</a>
+  </p>
 </footer>
 
 <script src="script.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-out-cubic"
+});
+</script>
+
+<!-- Tidio Chat -->
 <script src="//code.tidio.co/tw6kow2mch1fa9wt641dgrq0m3jitlnj.js" async></script>
   
 </body>
