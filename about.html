@@ -3,70 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Über Lynix AI</title>
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="images/logo.png">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body class="page about-page">
+
+<!-- HEADER -->
 <header>
-  <nav>
-    <!-- Logo -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Lynix AI Logo">
-      </a>
-    </div>
 
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Navigation -->
-    <ul>
-      <li><a href="index.html">Start</a></li>
-      <li><a href="about.html" class="active">Über uns</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Kontakt</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero-Bereich -->
-  <div class="hero">
+<nav>
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Lynix AI Logo">
+    </a>
   </div>
 
-  <div class="scroll-down" onclick="scrollToContent()">
-    ↓
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
   </div>
-  
+
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="about.html" class="active">Über uns</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+  <h1 data-aos="fade-up">
+    Über <span class="gradient-text">Lynix AI</span>
+  </h1>
+
+  <p data-aos="fade-up" data-aos-delay="200">
+    Wir entwickeln KI-Systeme für Automatisierung, Effizienz und Wachstum
+  </p>
+
+</div>
+
+<div class="scroll-down" onclick="scrollToContent()">↓</div>
+
 </header>
 
-<!-- Team Section -->
+<!-- TEAM -->
 <section class="team">
-  <h2 class="animated-text">Unser Gründerteam</h2>
+
+  <h2 data-aos="fade-up">Unser Gründerteam</h2>
+
   <div class="team-members">
-    <div class="member animated-card">
+
+    <div class="member card" data-aos="fade-up">
       <h3>Levon Shahverdyan</h3>
       <p>KI-Stratege & Visionär</p>
     </div>
-    <div class="member animated-card delay1">
+
+    <div class="member card" data-aos="fade-up" data-aos-delay="200">
       <h3>Hamza Polat</h3>
       <p>Technologie-Architekt & Entwickler</p>
     </div>
+
   </div>
+
 </section>
 
-<!-- Mission Section -->
+<!-- MISSION -->
 <section class="mission">
-  <h2 class="animated-text delay2">Unsere Mission</h2>
-  <p class="animated-text delay3">
-    Lynix AI mit Sitz in Kufstein bietet Unternehmen smarte KI-Lösungen für Automatisierung, Datenanalyse und Effizienzsteigerung. Wir machen KI greifbar und nutzen sie, um echte Geschäftsergebnisse zu erzielen.
+
+  <h2 data-aos="fade-up">Unsere Mission</h2>
+
+  <p data-aos="fade-up" data-aos-delay="200">
+    Lynix AI mit Sitz in Kufstein entwickelt intelligente Systeme, die Unternehmen helfen,
+    Prozesse zu automatisieren, Daten besser zu nutzen und schneller zu wachsen.
+    Unser Ziel ist es, künstliche Intelligenz praktisch und greifbar zu machen.
   </p>
+
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
   <p>
     &copy; 2026 Lynix AI |
@@ -75,8 +97,19 @@
   </p>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-out-cubic"
+});
+</script>
+
 <script src="//code.tidio.co/tw6kow2mch1fa9wt641dgrq0m3jitlnj.js" async></script>
-  
+
 </body>
 </html>
