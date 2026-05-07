@@ -122,21 +122,20 @@
 
 </section>
 
-  <div style="
+ <div style="
   display:flex;
   flex-wrap:wrap;
-  gap:24px;
+  gap:0;
   max-width:1000px;
   margin:auto;
-  border:1px solid #e5e5e5;
-  border-radius:16px;
+  border-radius:18px;
   overflow:hidden;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
   font-family:Arial, sans-serif;
 ">
 
   <!-- Google Maps -->
-  <div style="flex:1 1 400px; min-height:350px;">
+  <div style="flex:1 1 420px; min-height:350px;">
     <iframe
       src="https://www.google.com/maps?q=Oberer+Stadtplatz+1,+Kufstein&output=embed"
       width="100%"
@@ -147,51 +146,40 @@
     </iframe>
   </div>
 
-  <!-- Firmeninfos -->
+  <!-- Rechte Seite -->
   <div style="
     flex:1 1 320px;
-    padding:32px;
-    background:#fafafa;
+    background:#0f172a;
+    color:white;
+    padding:40px;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    align-items:flex-start;
+    position:relative;
   ">
 
-    <h2 style="
-      margin-top:0;
-      margin-bottom:12px;
-      font-size:32px;
-      color:#111;
-    ">
-      Lynix AI
-    </h2>
+    <!-- Logo -->
+    <img
+      src="images/logo.png"
+      alt="Lynix AI Logo"
+      style="
+        width:180px;
+        margin-bottom:80px;
+      "
+    >
 
+    <!-- Adresse -->
     <p style="
-      font-size:18px;
-      line-height:1.6;
-      color:#444;
-      margin-bottom:24px;
+      font-size:20px;
+      line-height:1.8;
+      margin:0;
+      margin-top:auto;
+      color:white;
     ">
       Oberer Stadtplatz 1<br>
       6330 Kufstein<br>
       Österreich
     </p>
-
-    <a
-      href="https://maps.google.com/?q=Oberer+Stadtplatz+1,+Kufstein"
-      target="_blank"
-      style="
-        display:inline-block;
-        padding:14px 22px;
-        background:#000;
-        color:#fff;
-        text-decoration:none;
-        border-radius:10px;
-        font-weight:bold;
-        width:fit-content;
-      ">
-      In Google Maps öffnen
-    </a>
 
   </div>
 
