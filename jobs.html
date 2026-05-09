@@ -14,8 +14,10 @@
 
 <body class="jobs-page">
 
+<!-- PROGRESS -->
 <div id="progress"></div>
 
+<!-- HEADER -->
 <header>
 
 <nav>
@@ -27,7 +29,7 @@
     <span></span><span></span><span></span>
   </div>
 
-  <ul id="nav-links">
+  <ul>
     <li><a href="index.html">Start</a></li>
     <li><a href="about.html">Über uns</a></li>
     <li><a href="services.html">Services</a></li>
@@ -54,8 +56,7 @@
   <div class="job-card card" data-aos="fade-up">
     <h2>AI Automation Engineer</h2>
     <p>
-      Entwicklung moderner KI-Workflows, Automatisierungen
-      und AI-Agenten.
+      Entwicklung moderner KI-Workflows, Automatisierungen und AI-Agenten für Unternehmen.
     </p>
 
     <ul>
@@ -63,17 +64,12 @@
       <li>Vollzeit / Teilzeit</li>
       <li>n8n, APIs, OpenAI</li>
     </ul>
-
-    <button class="btn apply-btn" onclick="openForm('AI Automation Engineer')">
-      Jetzt bewerben
-    </button>
   </div>
 
   <div class="job-card card" data-aos="fade-up" data-aos-delay="200">
     <h2>Frontend Webdesigner</h2>
     <p>
-      Erstellung moderner Webseiten und Landingpages
-      für Unternehmen.
+      Erstellung moderner Webseiten und Landingpages für Kunden im AI-Umfeld.
     </p>
 
     <ul>
@@ -81,58 +77,65 @@
       <li>Webflow / React</li>
       <li>UI/UX Erfahrung</li>
     </ul>
-
-    <button class="btn apply-btn" onclick="openForm('Frontend Webdesigner')">
-      Jetzt bewerben
-    </button>
   </div>
 
 </section>
 
-<!-- APPLICATION FORM -->
-<section class="application-section" id="application-section">
+<!-- APPLICATION -->
+<section class="application-section">
 
   <div class="application-form card">
 
     <h2>Bewerbung senden</h2>
 
-    <form>
-
-      <input type="text" placeholder="Vorname & Nachname" required>
-
-      <input type="email" placeholder="E-Mail Adresse" required>
-
-      <input type="text" id="job-position" placeholder="Position" readonly>
-
-      <textarea rows="6" placeholder="Erzähl uns etwas über dich"></textarea>
-
-      <label class="upload-label">
-        Lebenslauf hochladen (PDF)
-        <input type="file" accept=".pdf">
-      </label>
-
-      <button type="submit" class="btn">
-        Bewerbung absenden
-      </button>
-
-    </form>
+    <iframe
+      data-tally-src="https://tally.so/embed/dWKYNy?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="1288"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="jetzt bewerben">
+    </iframe>
 
   </div>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>&copy; 2026 Lynix AI</p>
 </footer>
 
+<!-- SCRIPTS -->
 <script src="script.js"></script>
 
 <script>
-function openForm(position) {
-  document.getElementById("application-section")
-    .scrollIntoView({ behavior: "smooth" });
+var d = document,
+w = "https://tally.so/widgets/embed.js",
 
-  document.getElementById("job-position").value = position;
+v = function() {
+  if (typeof Tally !== "undefined") {
+    Tally.loadEmbeds();
+  } else {
+    d.querySelectorAll("iframe[data-tally-src]:not([src])")
+    .forEach(function(e) {
+      e.src = e.dataset.tallySrc;
+    });
+  }
+};
+
+if (typeof Tally !== "undefined") {
+  v();
+} else if (d.querySelector('script[src="' + w + '"]') == null) {
+
+  var s = d.createElement("script");
+  s.src = w;
+  s.onload = v;
+  s.onerror = v;
+
+  d.body.appendChild(s);
 }
 </script>
 
