@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jobs – Lynix AI</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="jobs-page">
+
+<div id="progress"></div>
+
+<header>
+
+<nav>
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="Lynix AI Logo">
+  </a>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+
+  <ul id="nav-links">
+    <li><a href="index.html">Start</a></li>
+    <li><a href="about.html">Über uns</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Kontakt</a></li>
+    <li><a href="jobs.html">Jobs</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <h1 data-aos="fade-up">
+    Karriere bei <span class="gradient-text">Lynix AI</span>
+  </h1>
+
+  <p data-aos="fade-up" data-aos-delay="200">
+    Werde Teil der Zukunft der KI-Automatisierung
+  </p>
+</div>
+
+</header>
+
+<!-- JOBS -->
+<section class="jobs-section">
+
+  <div class="job-card card" data-aos="fade-up">
+    <h2>AI Automation Engineer</h2>
+    <p>
+      Entwicklung moderner KI-Workflows, Automatisierungen
+      und AI-Agenten.
+    </p>
+
+    <ul>
+      <li>Remote möglich</li>
+      <li>Vollzeit / Teilzeit</li>
+      <li>n8n, APIs, OpenAI</li>
+    </ul>
+
+    <button class="btn apply-btn" onclick="openForm('AI Automation Engineer')">
+      Jetzt bewerben
+    </button>
+  </div>
+
+  <div class="job-card card" data-aos="fade-up" data-aos-delay="200">
+    <h2>Frontend Webdesigner</h2>
+    <p>
+      Erstellung moderner Webseiten und Landingpages
+      für Unternehmen.
+    </p>
+
+    <ul>
+      <li>Remote möglich</li>
+      <li>Webflow / React</li>
+      <li>UI/UX Erfahrung</li>
+    </ul>
+
+    <button class="btn apply-btn" onclick="openForm('Frontend Webdesigner')">
+      Jetzt bewerben
+    </button>
+  </div>
+
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="application-section" id="application-section">
+
+  <div class="application-form card">
+
+    <h2>Bewerbung senden</h2>
+
+    <form>
+
+      <input type="text" placeholder="Vorname & Nachname" required>
+
+      <input type="email" placeholder="E-Mail Adresse" required>
+
+      <input type="text" id="job-position" placeholder="Position" readonly>
+
+      <textarea rows="6" placeholder="Erzähl uns etwas über dich"></textarea>
+
+      <label class="upload-label">
+        Lebenslauf hochladen (PDF)
+        <input type="file" accept=".pdf">
+      </label>
+
+      <button type="submit" class="btn">
+        Bewerbung absenden
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 Lynix AI</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+function openForm(position) {
+  document.getElementById("application-section")
+    .scrollIntoView({ behavior: "smooth" });
+
+  document.getElementById("job-position").value = position;
+}
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+</body>
+</html>
