@@ -612,18 +612,3 @@ body.jobs-page header {
   line-height: 1.7;
   color: #d0d0d0;
 }
-
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
-  background: #5b5bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #7777ff;
-}
