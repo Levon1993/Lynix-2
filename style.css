@@ -248,8 +248,8 @@ body.about-page header::before {
 }
 @media (max-width: 768px) {
     body.about-page header {
-        background-size: contain; /* passt Bild an kleinere Screens an */
-        background-position: center center;
+        background-size: cover; /* passt Bild an kleinere Screens an */
+        background-position: center top;
     }
 }
 body.contact-page header {
