@@ -572,8 +572,7 @@ body.jobs-page header {
     }
 
 }
-<style>
-.hero {
+.video-hero {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -582,6 +581,14 @@ body.jobs-page header {
   background: #0b0b0b;
   color: white;
   flex-wrap: wrap;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .video-hero {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .hero-video video {
@@ -620,4 +627,3 @@ body.jobs-page header {
 .btn:hover {
   background: #7777ff;
 }
-</style>
