@@ -478,7 +478,7 @@ body.jobs-page header {
     min-height: 70vh;
     background:
     linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('images/hintergrund3.jpg') center center / cover no-repeat;
+    url('images/jobs.jpg') center center / cover no-repeat;
 }
 
 .jobs-section {
