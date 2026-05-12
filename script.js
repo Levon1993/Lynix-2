@@ -161,19 +161,16 @@ function showSlide(index) {
   slides[index].classList.add("active");
 }
 
-function nextSlide() {
-  currentSlide++;
-  if (currentSlide >= slides.length) currentSlide = 0;
-  showSlide(currentSlide);
-}
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
 
-function prevSlide() {
-  currentSlide--;
-  if (currentSlide < 0) currentSlide = slides.length - 1;
-  showSlide(currentSlide);
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
 }
 
 // Auto-Slide
 setInterval(() => {
-  nextSlide();
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
 }, 5000);
