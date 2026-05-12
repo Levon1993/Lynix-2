@@ -153,24 +153,23 @@ function calculateROI() {
   document.getElementById("yearSaved").innerText =
     `${yearlySavings.toFixed(0)}€ gespart / Jahr`;
 }
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+document.addEventListener("DOMContentLoaded", () => {
 
-function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[index].classList.add("active");
-}
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
 
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+  if (!slides.length) return;
 
-function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[index].classList.add("active");
-}
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
 
-// Auto-Slide
-setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
-}, 2000);
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 8000);
+
+});
