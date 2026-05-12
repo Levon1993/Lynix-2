@@ -200,4 +200,7 @@ function updateCountdown() {
   hoursEl.innerText = hours;
   minutesEl.innerText = minutes;
   secondsEl.innerText = seconds;
+
+  updateCountdown();
+setInterval(updateCountdown, 1000);
 }
