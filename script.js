@@ -202,5 +202,5 @@ function updateCountdown() {
   secondsEl.innerText = seconds;
 
   updateCountdown();
-setInterval(updateCountdown, 1000);
+  setInterval(updateCountdown, 1000);
 }
