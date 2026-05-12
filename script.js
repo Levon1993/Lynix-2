@@ -132,3 +132,24 @@ window.addEventListener("scroll", () => {
   let scrolled = (scrollTop / height) * 100;
   document.getElementById("progress").style.width = scrolled + "%";
 });
+
+function calculateROI() {
+
+  const employees = Number(document.getElementById("employees").value);
+  const hours = Number(document.getElementById("hours").value);
+  const rate = Number(document.getElementById("rate").value);
+  const saving = Number(document.getElementById("saving").value) / 100;
+
+  const savedHours = employees * hours * 4 * saving;
+  const monthlySavings = savedHours * rate;
+  const yearlySavings = monthlySavings * 12;
+
+  document.getElementById("hoursSaved").innerText =
+    `${savedHours.toFixed(0)} Stunden gespart / Monat`;
+
+  document.getElementById("moneySaved").innerText =
+    `${monthlySavings.toFixed(0)}€ gespart / Monat`;
+
+  document.getElementById("yearSaved").innerText =
+    `${yearlySavings.toFixed(0)}€ gespart / Jahr`;
+}
