@@ -131,8 +131,8 @@ window.addEventListener("scroll", () => {
   let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let scrolled = (scrollTop / height) * 100;
   document.getElementById("progress").style.width = scrolled + "%";
-  });
-}
+});
+
 function calculateROI() {
 
   const employees = Number(document.getElementById("employees")?.value || 0);
