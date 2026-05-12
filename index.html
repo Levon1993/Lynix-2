@@ -110,6 +110,35 @@
 
     <a href="contact.html" class="btn">Jetzt Kontakt aufnehmen</a>
   </div>
+
+    <section class="roi-section">
+
+  <h2>Berechnen Sie Ihr AI-Potenzial</h2>
+  <p>Finden Sie heraus, wie viel Zeit & Geld Ihr Unternehmen sparen kann.</p>
+
+  <div class="roi-calculator">
+
+    <input type="number" id="employees" placeholder="Anzahl Mitarbeiter">
+
+    <input type="number" id="hours" placeholder="Stunden repetitive Arbeit / Woche">
+
+    <input type="number" id="rate" placeholder="Durchschnittlicher Stundenlohn (€)">
+
+    <input type="number" id="saving" placeholder="AI Einsparung in %">
+
+    <button onclick="calculateROI()" class="btn">
+      ROI berechnen
+    </button>
+
+    <div class="roi-results">
+      <h3 id="hoursSaved">0 Stunden gespart / Monat</h3>
+      <h3 id="moneySaved">0€ gespart / Monat</h3>
+      <h3 id="yearSaved">0€ gespart / Jahr</h3>
+    </div>
+
+  </div>
+
+</section>
 </section>
 
   <section class="reviews">
