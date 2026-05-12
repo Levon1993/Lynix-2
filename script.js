@@ -135,10 +135,10 @@ window.addEventListener("scroll", () => {
 
 function calculateROI() {
 
-  const employees = Number(document.getElementById("employees").value);
-  const hours = Number(document.getElementById("hours").value);
-  const rate = Number(document.getElementById("rate").value);
-  const saving = Number(document.getElementById("saving").value) / 100;
+  const employees = Number(document.getElementById("employees")?.value || 0);
+  const hours = Number(document.getElementById("hours")?.value || 0);
+  const rate = Number(document.getElementById("rate")?.value || 0);
+  const saving = Number(document.getElementById("saving")?.value || 0) / 100;
 
   const savedHours = employees * hours * 4 * saving;
   const monthlySavings = savedHours * rate;
